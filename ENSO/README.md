@@ -1,10 +1,12 @@
 # El Nino-Southern Oscillation (ENSO) Data
 ENSO Related Monthly Climate Data (1950-2026)
 
+
 ### Context
 ENSO is a periodic fluctuation (i.e., every 2–7 years) in winds and sea surface temperatures over the tropical eastern Pacific Ocean, affecting the climate of many parts of the world. It is one of the main drivers of interannual climate variability on Earth and influences global weather patterns, including temperature and precipitation anomalies. 
 
 This dataset contains ENSO indicators and related data for analyzing and forecasting ENSO and its global impacts. 
+
 
 ### Content
 The dataset contains ENSO-related climate data from 1950–2026, sourced from NOAA (National Oceanic and Atmospheric Administration) and related official climate datasets. 
@@ -14,7 +16,13 @@ The dataset contains ENSO-related climate data from 1950–2026, sourced from NO
 - **ONI**
   - Oceanic Niño Index
   - 3-month running mean of Niño 3.4 SST anomalies
-  - official ENSO classification index (El Niño / La Niña)
+  - official ENSO classification index
+
+- **RONI**
+  - Relative Oceanic Niño Index
+  - adjusted version of ONI
+  - reduces baseline bias in SST anomalies
+  - de-facto ENSO classification index used by NOAA 
 
 - **Nino 3.4 SST**
   - Niño 3.4 Region Sea Surface Temperature
@@ -92,17 +100,13 @@ The dataset contains ENSO-related climate data from 1950–2026, sourced from NO
   - measures atmospheric pressure differences in Pacific
   - linked to ENSO-related circulation changes
 
-- **RONI**
-  - Relative Oceanic Niño Index
-  - adjusted version of ONI
-  - reduces baseline bias in SST anomalies
-
 
 #### Other columns:
 
-- **ENSO Phase-Intensity**
-  - a classification target variable in ENSO prediction
-  - represents both the phase and intensity of ENSO condition <br>
+- **ENSO Phase–Intensity (ONI-based)**
+  - classification target variable for ENSO prediction
+  - represents both the phase and intensity of ENSO conditions based on ONI <br>
+    VSE → Very Strong El Niño <br>
     SE → Strong El Niño <br>
     ME → Moderate El Niño <br>
     WE → Weak El Niño <br>
@@ -110,6 +114,10 @@ The dataset contains ENSO-related climate data from 1950–2026, sourced from NO
     ML → Moderate La Niña <br>
     WL → Weak La Niña <br>
     N → Neutral
+
+- **ENSO Phase–Intensity (RONI-based)**
+  - classification target variable for ENSO prediction
+  - represents both the phase and intensity of ENSO conditions based on RONI
 
 - **Global Temperature Anomaly (Land & Ocean)**
   - represents the global average temperature anomaly across land and ocean surfaces
@@ -147,4 +155,6 @@ The dataset contains ENSO-related climate data from 1950–2026, sourced from NO
 
 [2] NOAA Physical Sciences Laboratory (PSL), "Monthly Climate/Ocean Indices (Time-Series) at PSL." [Online]. Available: https://psl.noaa.gov/data/climateindices/list
 
-[3] Golden Gate Weather Services, "El Niño and La Niña Years and Intensities." [Online]. Available: https://ggweather.com/enso/oni.htm
+[3] Golden Gate Weather Services, "El Niño and La Niña Years and Intensities Based on Oceanic Niño Index (ONI) " [Online]. Available: https://ggweather.com/enso/oni.htm
+
+[4] Golden Gate Weather Services, "El Niño and La Niña Years and Intensities Based on Relative Oceanic Niño Index (RONI) " [Online]. Available: https://ggweather.com/enso/roni.htm
