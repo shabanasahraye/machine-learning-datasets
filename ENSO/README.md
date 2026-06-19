@@ -1,39 +1,150 @@
 # El Nino-Southern Oscillation (ENSO) Data
-ENSO Related Standardized Monthly Climate Data (1950–2023)
+ENSO Related Monthly Climate Data (1950-2026)
 
 ### Context
-ENSO is a periodic fluctuation (i.e., every 2–7 years) in winds and sea surface temperatures over the tropical eastern Pacific Ocean, affecting the climate of many parts of the world. It is one of the main drivers of the interannual climate variability of Earth and can cause a wide range of climate anomalies. This dataset is to store  ENSO indicators (variables related to ENSO) for better understanding and prediction of ENSO.
+ENSO is a periodic fluctuation (i.e., every 2–7 years) in winds and sea surface temperatures over the tropical eastern Pacific Ocean, affecting the climate of many parts of the world. It is one of the main drivers of interannual climate variability on Earth and influences global weather patterns, including temperature and precipitation anomalies. 
+
+This dataset compiles ENSO-related indicators to support analysis and prediction of ENSO variability and its global impacts. 
 
 ### Content
-The dataset contains ENSO-related standardized climate data from 1950 to 2023, collected from NOAA & NASA sites.
+The dataset contains ENSO-related climate data from 1950–2026, sourced from NOAA (National Oceanic and Atmospheric Administration) and related official climate datasets. 
 
-ENSO indicator columns:
-- ONI
-- SOI
-- MEI.v2
-- OLR
-- TNI
-- PNA
-- Nino 1+2 SST
-- Nino 1+2 SST Anomalies
-- Nino 3 SST
-- Nino 3 SST Anomalies
-- Nino 3.4 SST
-- Nino 3.4 SST Anomalies
-- Nino 4 SST
-- Nino 4 SST Anomalies
+#### ENSO Indicator Columns
 
-Other columns:
-- ENSO Phase-Intensity
-- Global Temperature Anomalies
-- Date
-- Month
-- Year
-- Season (2-month)
-- Season (3-month)
-- Season (12-month)
+- **ONI**
+  - Oceanic Niño Index
+  - 3-month running mean of Niño 3.4 SST anomalies
+  - official ENSO classification index (El Niño / La Niña)
+
+- **Nino 3.4 SST**
+  - Niño 3.4 Region Sea Surface Temperature
+  - main ENSO monitoring region (5°N–5°S, 170°W–120°W)
+
+- **Nino 3.4 SST Anomaly**
+  - Niño 3.4 Region Sea Surface Temperature Anomaly
+  -  best indicator of ENSO strength
+
+- **MEI.ext**
+  - Multivariate ENSO Index Extended
+  - multivariate index combining SST, winds, pressure, OLR
+  - captures full ENSO system behavior
+
+- **MEI.v2**
+  - Multivariate ENSO Index Version 2
+  - improved version of MEI.ext with updated datasets
+  - more robust ENSO representation
+
+- **BEST**
+  - Bivariate ENSO Timeseries
+  - combines SOI + Niño 3.4 SST
+  - balances atmospheric + oceanic ENSO signals
+
+- **Nino 3 SST**
+  - Niño 3 Region Sea Surface Temperature
+  - Eastern Pacific ENSO region
+  - captures classical El Niño warming
+
+- **Nino 3 SST Anomaly**
+  - Niño 3 Region Sea Surface Temperature Anomaly
+
+- **Nino 4 SST**
+  - Niño 4 Region Sea Surface Temperature
+  - Western Pacific ENSO region
+  - captures Modoki-type ENSO events
+
+- **Nino 4 SST Anomaly**
+  - Niño 4 Region Sea Surface Temperature Anomaly
+
+- **Nino 1+2 SST**
+  - Niño 1+2 Region Sea Surface Temperature
+  - closest to South American coast
+  - highly variable, responds strongly to El Niño
+
+- **Nino 1+2 SST Anomaly**
+  - Niño 1+2 Region Sea Surface Temperature Anomaly
+
+- **TNI**
+  - Trans-Niño Index
+  - tracks ENSO development phase shift
+  - measures spatial migration of warming
+
+- **SOI**
+  - Southern Oscillation Index
+  - atmospheric ENSO component
+  - Negative SOI = El Niño conditions
+
+- **OLR**
+  - Outgoing Longwave Radiation
+  - proxy for cloudiness and convection
+  - low OLR = strong convection (El Niño signals)
+
+- **ENSO Precipitation Index**
+  - measures rainfall anomalies in tropical Pacific
+  - captures ENSO-driven precipitation shifts
+
+- **PNA**
+  - Pacific–North American Index
+  - North Pacific–North America circulation pattern
+  - ENSO affects its phase and strength
+
+- **NOI**
+  - Northern Oscillation Index
+  - measures atmospheric pressure differences in Pacific
+  - linked to ENSO-related circulation changes
+
+- **RONI**
+  - Relative Oceanic Niño Index
+  - adjusted version of ONI
+  - reduces baseline bias in SST anomalies
+
+
+#### Other columns:
+
+- **ENSO Phase-Intensity**
+  - a classification target variable in ENSO prediction
+  - represents both the phase and intensity of ENSO condition <br>
+    SE → Strong El Niño <br>
+    ME → Moderate El Niño <br>
+    WE → Weak El Niño <br>
+    SL → Strong La Niña <br>
+    ML → Moderate La Niña <br>
+    WL → Weak La Niña <br>
+    N → Neutral
+
+- **Global Temperature Anomaly (Land & Ocean)**
+  - represents the global average temperature anomaly across land and ocean surfaces
+
+- **Date**
+  - format: MM-DD-YYYY
+
+- **Month**
+  - format: MMM
+  - JAN–DEC
+
+- **Year**
+  - YYYY
+
+- **Season (2-month)**
+  - represents a 2-month rolling or grouped average
+  - for indices like MEI.ext and MEI.v2
+
+- **Season (3-month)**
+  - represents a 3-month running mean
+  - for indices like ONI and RONI
+
+- **Season (12-month)**
+  - represents a 12-month running mean
+  - used for long-term ENSO variability and phase persistence 
+
 
 ### Acknowledgements
 - NOAA – National Oceanic and Atmospheric Administration
-- NCEI – National Centers for Environmental Information
-- NCAR – National Center for Atmospheric Research
+
+
+### References
+
+[1] NOAA Physical Sciences Laboratory (PSL), "Climate Indices: Monthly Atmospheric and Ocean Time Series." [Online]. Available: https://psl.noaa.gov/data/timeseries/month/
+
+[2] NOAA Physical Sciences Laboratory (PSL), "Monthly Climate/Ocean Indices (Time-Series) at PSL." [Online]. Available: https://psl.noaa.gov/data/climateindices/list
+
+[3] Golden Gate Weather Services, "El Niño and La Niña Years and Intensities." [Online]. Available: https://ggweather.com/enso/oni.htm
