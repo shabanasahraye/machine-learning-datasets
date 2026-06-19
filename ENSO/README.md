@@ -4,7 +4,7 @@ ENSO Related Monthly Climate Data (1950-2026)
 ### Context
 ENSO is a periodic fluctuation (i.e., every 2–7 years) in winds and sea surface temperatures over the tropical eastern Pacific Ocean, affecting the climate of many parts of the world. It is one of the main drivers of interannual climate variability on Earth and influences global weather patterns, including temperature and precipitation anomalies. 
 
-This dataset compiles ENSO-related indicators to support analysis and prediction of ENSO variability and its global impacts. 
+This dataset contains ENSO indicators and related data for analyzing and forecasting ENSO and its global impacts. 
 
 ### Content
 The dataset contains ENSO-related climate data from 1950–2026, sourced from NOAA (National Oceanic and Atmospheric Administration) and related official climate datasets. 
